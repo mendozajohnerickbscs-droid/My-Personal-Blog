@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .section-title {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+
+    /* Custom image styles */
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    }
+
+    .hobby-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark gradient-bg shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">My Profile</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#family">Family</a></li>
+        <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sports">Sports</a></li>
+        <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Alert -->
+<div class="alert alert-info alert-dismissible fade show text-center mb-0 shadow-sm" role="alert">
+  🌟 Welcome to my landing page! Click "Read More" in Profile to learn about me.
+  <button class="btn-close" type="button" data-bs-dismiss="alert"></button>
+</div>
+
+<!-- Profile Section -->
+<section id="profile" class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Profile</h2>
+    <div id="profileCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="profile-img" src="profile picture.jpg" alt="Profile Picture" />
+        </div>
+        <div class="carousel-item">
+          <img class="profile-img" src="profile2.jpg" alt="Alternate Picture" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <button class="btn btn-primary mt-3 shadow" data-bs-toggle="modal" data-bs-target="#profileModal">Read More</button>
+  </div>
+</section>
+
+<!-- Profile Modal -->
+<div id="profileModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header gradient-bg">
+        <h5 class="modal-title">About Me</h5>
+      </div>
+      <div class="modal-body">
+        I'm John Erick Mendoza. I like playing games, coding, and many more.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hobbies Section -->
+<section id="hobbies" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Hobbies</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img class="hobby-img" src="playing.jfif" alt="Playing Games" />
+          <div class="card-body">
+            <h5 class="card-title">Playing Games</h5>
+            <p class="card-text">I love playing games because they let me escape reality for a while, challenge my mind, and connect with people who share the same passion.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img class="hobby-img" src="gym.jfif" alt="Working Out" />
+          <div class="card-body">
+            <h5 class="card-title">Working Out</h5>
+            <p class="card-text">I love working out because it makes me feel stronger, clears my mind, and reminds me that I’m always capable of pushing past my limits.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img class="hobby-img" src="prpgram.jfif" alt="Programming" />
+          <div class="card-body">
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">I love programming because it lets me create something out of nothing, solve problems in my own way, and keep learning with every line of code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Family Section -->
+<section id="family" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Family Members</h2>
+    <ul class="list-group shadow">
+      <li class="list-group-item">Mother - Maribel Mendoza <span class="badge bg-primary">Mom</span></li>
+      <li class="list-group-item">Father - Lucerio Mendoza <span class="badge bg-success">Dad</span></li>
+      <li class="list-group-item">Sibling - Erica Mendoza <span class="badge bg-info">Sister</span></li>
+      <li class="list-group-item">Sibling - Erich Mendoza <span class="badge bg-info">Brother</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Favorites Section -->
+<section id="favorites" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Favorites</h2>
+    <div id="favoritesAccordion" class="accordion shadow">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#food">
+            Favorite Food
+          </button>
+        </h2>
+        <div id="food" class="accordion-collapse collapse show" data-bs-parent="#favoritesAccordion">
+          <div class="accordion-body">Pizza, Pasta, Ice Cream</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#movie">
+            Favorite Movie
+          </button>
+        </h2>
+        <div id="movie" class="accordion-collapse collapse" data-bs-parent="#favoritesAccordion">
+          <div class="accordion-body">Your favorite movie here</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sports Section -->
+<section id="sports" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Sports</h2>
+    <table class="table table-striped shadow">
+      <thead class="table-primary">
+        <tr>
+          <th>Sport</th>
+          <th>Skill Level</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basketball</td>
+          <td>Intermediate</td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 70%;"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Badminton</td>
+          <td>Beginner</td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width: 40%;"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Feedback Section -->
+<section id="feedback" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Feedback Form</h2>
+    <form class="shadow p-4 bg-white rounded">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" type="text" placeholder="Your name" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input class="form-control" type="email" placeholder="Your email" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary w-100" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-light text-center py-3 shadow-lg">© 2025 My Personal Blog</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
